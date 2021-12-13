@@ -5,7 +5,7 @@ export default function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e);
+        console.log(e.target[1].value);
     }
     return (
         <div className='contact' id="contact">

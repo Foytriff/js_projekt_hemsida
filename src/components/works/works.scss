@@ -6,10 +6,33 @@
     align-items: center;
 
     .content-container{
-        background-color: white;
+        background-color: rgb(10, 10, 10);
         border-radius: 6px;
         padding: 1rem;
         box-shadow: 2px 2px 5px 1px black;
+        width: 70%;
+                
+        .media-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+            h3 {
+                color: whitesmoke;
+                font-size: 14px;
+                font-style: italic;
+            }
+
+            & > * {
+                margin: 10px 20px;
+
+                & * {
+                    overflow: hidden;
+                }
+            }
+        }
     }
 
     ul {
@@ -17,6 +40,9 @@
         padding: 0;
         list-style: none;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
 }
 

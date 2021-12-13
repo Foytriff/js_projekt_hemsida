@@ -7,7 +7,7 @@ import { musicVideos, concerts } from "../../data"
 export default function Works() {
     
     const [selected, setSelected] = useState("koncerter");
-    const [content, setContent] = useState([]);
+    const [content, setContent] = useState(null);
 
     useEffect(() => {
         switch(selected){
@@ -25,19 +25,19 @@ export default function Works() {
     const titleList = [
         {
             id: "koncerter",
-            title: "Koncerter",
+            title: "KONCERTER",
         },
         {
             id: "musikvideor",
-            title: "Musik Videor",
+            title: "MUSIK VIDEOR",
         },
         {
             id: "galleri",
-            title: "Galleri",
+            title: "GALLERI",
         },
         {
             id: "stream",
-            title: "Stream",
+            title: "STREAM",
         },
     ];
 
@@ -52,7 +52,7 @@ export default function Works() {
                 <div className="media-container">
                     {content && content.map((item)=>{
                         return <div key={item.id}>
-                                    <ReactPlayer url={item.url} />
+                                    <ReactPlayer width="22.5rem" height="15.5rem" url={item.url} />
                                     <h3>{item.title}</h3>
                                 </div>
                     })}
