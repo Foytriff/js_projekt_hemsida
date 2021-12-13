@@ -13,11 +13,11 @@ export default function Contact() {
                 <img src="assets/juliabild.png" alt="" />
             </div>
             <div className="right">
-                <h2>Contact.</h2>
+                <h2>Kontakt.</h2>
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder="Email" />
                     <textarea placeholder="Message"></textarea>
-                    <button type='submit'>Send</button>
+                    <button type='submit'>Skicka</button>
                 </form>
             </div>
         </div>
