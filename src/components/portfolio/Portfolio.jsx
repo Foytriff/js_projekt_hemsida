@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Bandmember from './bandmeber/Bandmember';
 import "./portfolio.scss"
 
@@ -37,10 +37,6 @@ export default function Portfolio() {
 
     const [memberBio, setMemberBio] = useState(null);
 
-    useEffect(() => {
-        
-    }, [memberBio])
-
     return (
         <div className='portfolio gradient' id="portfolio">
             <h1>BANDMEDLEMMAR</h1>
@@ -49,7 +45,7 @@ export default function Portfolio() {
                         return <Bandmember key={item.id} id={item.id} img={item.img} click={val => setMemberBio(val)} clicked ={item.id === memberBio} />
                     }))}
             </div>
-            <div className="port-container">
+            <div className={"port-container " + (!memberBio && "hide")}>
                 <div className="biography-section">
                     <h1>{memberBio && bandArray[memberBio - 1].name}</h1>
                     <p>{memberBio && bandArray[memberBio - 1].bio}</p>

@@ -1,15 +1,61 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./works.scss"
+import MediaButton from "./mediabutton/MediaButton"
+import ReactPlayer from 'react-player'
+import { musicVideos, concerts } from "../../data"
 
 export default function Works() {
-    return (
-        <div className='works' id="works">
-            <div className="content-container">
-                <div className="tab-container">
-                    
-                </div>
-                <div className="media-container">
+    
+    const [selected, setSelected] = useState("koncerter");
+    const [content, setContent] = useState([]);
 
+    useEffect(() => {
+        switch(selected){
+            case "koncerter":
+                setContent(concerts);
+                break;
+            case "musikvideor":
+                setContent(musicVideos);
+                break;
+            default:
+                setContent(musicVideos);
+        }
+    }, [selected])
+
+    const titleList = [
+        {
+            id: "koncerter",
+            title: "Koncerter",
+        },
+        {
+            id: "musikvideor",
+            title: "Musik Videor",
+        },
+        {
+            id: "galleri",
+            title: "Galleri",
+        },
+        {
+            id: "stream",
+            title: "Stream",
+        },
+    ];
+
+    return (
+        <div className='works gradient2' id="works">
+            <div className="content-container">
+                <ul>
+                    {titleList.map((item)=>{
+                        return <MediaButton title={item.title} active={selected === item.id} setSelected={setSelected} id={item.id}/>
+                    })}
+                </ul>
+                <div className="media-container">
+                    {content && content.map((item)=>{
+                        return <div key={item.id}>
+                                    <ReactPlayer url={item.url} />
+                                    <h3>{item.title}</h3>
+                                </div>
+                    })}
                 </div>
             </div>
         </div>
