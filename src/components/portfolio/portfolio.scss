@@ -1,0 +1,87 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        color: white;
+        font-size: 3rem;
+    }
+
+    .member-bar {
+        display: flex;
+        background-color:  rgba($color: #000000, $alpha: 0.75);
+        border-radius: 20px;
+        justify-content: center;
+        width: 50%;
+        height: 8rem;
+        transform: translate(0, 1rem);
+        padding: .5rem;
+
+        & > * {
+            flex: .25;
+            margin: .5rem 1%;
+            padding: .5rem;
+        }
+    }
+
+    .port-container {
+        background-color:  rgba($color: #000000, $alpha: 0.75);
+        width: 65vw;
+        border-radius: 4px;
+        padding: 2rem;
+        position: relative;
+        
+        .biography-section {
+            color: white;
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            width: 75%;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+    }
+
+    .gradient {
+
+        /* ff 3.6+ */
+        background:-moz-linear-gradient(180deg, rgba(229, 229, 201, 1) 0%, rgba(255, 59, 0, 1) 100%); 
+
+        /* safari 5.1+,chrome 10+ */
+        background:-webkit-linear-gradient(180deg, rgba(229, 229, 201, 1) 0%, rgba(255, 59, 0, 1) 100%);
+
+        /* opera 11.10+ */
+        background:-o-linear-gradient(180deg, rgba(229, 229, 201, 1) 0%, rgba(255, 59, 0, 1) 100%);
+
+        /* ie 6-9 */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF3B00', endColorstr='#E5E5C9', GradientType=1 );
+
+        /* ie 10+ */
+        background:-ms-linear-gradient(180deg, rgba(229, 229, 201, 1) 0%, rgba(255, 59, 0, 1) 100%);
+
+        /* global 94%+ browsers support */
+        background:linear-gradient(180deg, rgba(229, 229, 201, 1) 0%, rgba(255, 59, 0, 1) 100%);
+    }
+}
+
+.gradient {
+    /* ff 3.6+ */
+    background:-moz-linear-gradient(180deg, rgba(5, 5, 5, 1) 0%, rgba(255, 164, 0, 1) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(180deg, rgba(5, 5, 5, 1) 0%, rgba(255, 164, 0, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(180deg, rgba(5, 5, 5, 1) 0%, rgba(255, 164, 0, 1) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFA400', endColorstr='#050505', GradientType=1 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(180deg, rgba(5, 5, 5, 1) 0%, rgba(255, 164, 0, 1) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(180deg, rgba(5, 5, 5, 1) 0%, rgba(255, 164, 0, 1) 100%);
+
+}
